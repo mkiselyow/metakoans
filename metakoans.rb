@@ -1,3 +1,5 @@
+require 'pry'
+
 #
 # metakoans.rb is an arduous set of exercises designed to stretch
 # meta-programming muscle.  the focus is on a single method 'attribute' which
@@ -156,6 +158,7 @@ module MetaKoans
     o = c::new
 
     assert{ o.a == 42 }
+    binding.pry
     assert{ o.a? }
     assert{ (o.a = nil) == nil }
     assert{ not o.a? }
